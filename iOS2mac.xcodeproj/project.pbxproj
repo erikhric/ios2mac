@@ -11,7 +11,47 @@
 		843243F2262817D5008CCB8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843243F1262817D5008CCB8D /* ContentView.swift */; };
 		843243F4262817D6008CCB8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843243F3262817D6008CCB8D /* Assets.xcassets */; };
 		843243F7262817D6008CCB8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843243F6262817D6008CCB8D /* Preview Assets.xcassets */; };
+		84A500682629B4B700873A2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A500672629B4B700873A2E /* AppDelegate.swift */; };
+		84A500A52629C09300873A2E /* MacOSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A500A42629C09300873A2E /* MacOSBridge.swift */; };
+		84A500A82629C42200873A2E /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A500A72629C42200873A2E /* Interfaces.swift */; };
+		84A500AA2629C42500873A2E /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A500A72629C42200873A2E /* Interfaces.swift */; };
+		84A500B02629D51500873A2E /* macOSBridge.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 84A5009C2629B92D00873A2E /* macOSBridge.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A500B6262B37CA00873A2E /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A500B5262B37CA00873A2E /* HomeKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84A500B12629D51500873A2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 843243E4262817D5008CCB8D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84A5009B2629B92D00873A2E;
+			remoteInfo = macOSBridge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84A500902629B80300873A2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A500B32629D51500873A2E /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84A500B02629D51500873A2E /* macOSBridge.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		843243EC262817D5008CCB8D /* iOS2mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS2mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +60,26 @@
 		843243F3262817D6008CCB8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843243F6262817D6008CCB8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		843243F8262817D6008CCB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A500672629B4B700873A2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84A5006A2629B70000873A2E /* iOS2mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS2mac.entitlements; sourceTree = "<group>"; };
+		84A5009C2629B92D00873A2E /* macOSBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = macOSBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A5009E2629B92D00873A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84A500A32629C09300873A2E /* macOSBrigde-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "macOSBrigde-Bridging-Header.h"; sourceTree = "<group>"; };
+		84A500A42629C09300873A2E /* MacOSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOSBridge.swift; sourceTree = "<group>"; };
+		84A500A72629C42200873A2E /* Interfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		84A500B5262B37CA00873A2E /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		843243E9262817D5008CCB8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A500B6262B37CA00873A2E /* HomeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A500992629B92D00873A2E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				843243EE262817D5008CCB8D /* iOS2mac */,
+				84A5009D2629B92D00873A2E /* macOSBrigde */,
 				843243ED262817D5008CCB8D /* Products */,
+				84A5008B2629B80300873A2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				843243EC262817D5008CCB8D /* iOS2mac.app */,
+				84A5009C2629B92D00873A2E /* macOSBridge.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +111,8 @@
 		843243EE262817D5008CCB8D /* iOS2mac */ = {
 			isa = PBXGroup;
 			children = (
+				84A5006A2629B70000873A2E /* iOS2mac.entitlements */,
+				84A500672629B4B700873A2E /* AppDelegate.swift */,
 				843243EF262817D5008CCB8D /* iOS2macApp.swift */,
 				843243F1262817D5008CCB8D /* ContentView.swift */,
 				843243F3262817D6008CCB8D /* Assets.xcassets */,
@@ -69,6 +130,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		84A5008B2629B80300873A2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84A500B5262B37CA00873A2E /* HomeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84A5009D2629B92D00873A2E /* macOSBrigde */ = {
+			isa = PBXGroup;
+			children = (
+				84A500A42629C09300873A2E /* MacOSBridge.swift */,
+				84A500A32629C09300873A2E /* macOSBrigde-Bridging-Header.h */,
+				84A500A72629C42200873A2E /* Interfaces.swift */,
+				84A5009E2629B92D00873A2E /* Info.plist */,
+			);
+			path = macOSBrigde;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +159,35 @@
 				843243E8262817D5008CCB8D /* Sources */,
 				843243E9262817D5008CCB8D /* Frameworks */,
 				843243EA262817D5008CCB8D /* Resources */,
+				84A500902629B80300873A2E /* Embed Frameworks */,
+				84A500B32629D51500873A2E /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84A500B22629D51500873A2E /* PBXTargetDependency */,
 			);
 			name = iOS2mac;
 			productName = iOS2mac;
 			productReference = 843243EC262817D5008CCB8D /* iOS2mac.app */;
 			productType = "com.apple.product-type.application";
+		};
+		84A5009B2629B92D00873A2E /* macOSBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A5009F2629B92D00873A2E /* Build configuration list for PBXNativeTarget "macOSBridge" */;
+			buildPhases = (
+				84A500982629B92D00873A2E /* Sources */,
+				84A500992629B92D00873A2E /* Frameworks */,
+				84A5009A2629B92D00873A2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = macOSBridge;
+			productName = macOSBrigde;
+			productReference = 84A5009C2629B92D00873A2E /* macOSBridge.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +200,10 @@
 				TargetAttributes = {
 					843243EB262817D5008CCB8D = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					84A5009B2629B92D00873A2E = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -117,6 +221,7 @@
 			projectRoot = "";
 			targets = (
 				843243EB262817D5008CCB8D /* iOS2mac */,
+				84A5009B2629B92D00873A2E /* macOSBridge */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +236,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84A5009A2629B92D00873A2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,12 +250,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A500682629B4B700873A2E /* AppDelegate.swift in Sources */,
 				843243F2262817D5008CCB8D /* ContentView.swift in Sources */,
 				843243F0262817D5008CCB8D /* iOS2macApp.swift in Sources */,
+				84A500AA2629C42500873A2E /* Interfaces.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A500982629B92D00873A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A500A52629C09300873A2E /* MacOSBridge.swift in Sources */,
+				84A500A82629C42200873A2E /* Interfaces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84A500B22629D51500873A2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84A5009B2629B92D00873A2E /* macOSBridge */;
+			targetProxy = 84A500B12629D51500873A2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		843243F9262817D6008CCB8D /* Debug */ = {
@@ -267,8 +398,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS2mac/iOS2mac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS2mac/Preview Content\"";
+				DEVELOPMENT_TEAM = 76JW37K4WD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS2mac/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -278,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = medium.iOS2mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,8 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iOS2mac/iOS2mac.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS2mac/Preview Content\"";
+				DEVELOPMENT_TEAM = 76JW37K4WD;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS2mac/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -299,8 +435,58 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = medium.iOS2mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84A500A02629B92D00873A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSBrigde/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = medium.macOSBrigde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "macOSBrigde/macOSBrigde-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		84A500A12629B92D00873A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = macOSBrigde/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = medium.macOSBrigde;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "macOSBrigde/macOSBrigde-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -321,6 +507,15 @@
 			buildConfigurations = (
 				843243FC262817D6008CCB8D /* Debug */,
 				843243FD262817D6008CCB8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A5009F2629B92D00873A2E /* Build configuration list for PBXNativeTarget "macOSBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A500A02629B92D00873A2E /* Debug */,
+				84A500A12629B92D00873A2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

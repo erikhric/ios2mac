@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct iOS2macApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        appDelegate.setUpHomeManager()
+        return WindowGroup {
+            ContentView().environmentObject(appDelegate)
         }
     }
 }

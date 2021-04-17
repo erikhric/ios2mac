@@ -6,11 +6,22 @@
 //
 
 import SwiftUI
+import HomeKit
 
 struct ContentView: View {
+    
+    @EnvironmentObject var appDelegate: AppDelegate
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello, world!")
+                .padding()
+            Button("Create item") {
+                appDelegate.setUpHomeManager()
+                appDelegate.ios2mac?.createBarItem()
+            }
+        }
+        
     }
 }
 
